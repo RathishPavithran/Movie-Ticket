@@ -1,0 +1,27 @@
+
+.movie-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 16px;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+}
+
+.movie-card:hover {
+  background-color:gainsboro; /* Light blue color on hover */
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.movie-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.button-group {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}

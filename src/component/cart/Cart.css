@@ -1,0 +1,60 @@
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.movie-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 16px;
+}
+
+.movie-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.button-group {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.update-button {
+  padding: 10px;
+  background-color:#0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.update-button:hover {
+  background-color: #218838;
+}
+
+.remove-button {
+  padding: 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.remove-button:hover {
+  background-color: #c82333;
+}
+
+.movie-card h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
