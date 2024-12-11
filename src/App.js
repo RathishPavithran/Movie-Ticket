@@ -6,6 +6,7 @@ import MovieList from './component/details/MovieList';
 import MovieDetails from './component/details/MovieDetails';
 import Cart from './component/cart/Cart';
 import Login from './component/login/Login';
+import Register from './component/login/Register';
 import Navbar from './component/navbar/Navbar';
 import './App.css';
 
@@ -35,15 +36,17 @@ function App() {
     </AuthProvider>
   );
 }
+
 const AppContent = ({ movies }) => {
   const location = useLocation();
 
   return (
     <div className="app-container">
-      {/* Only render Navbar if not on the login page */}
-      {location.pathname !== '/' && <Navbar />}
+      {/* Only render Navbar if not on the register page */}
+      {location.pathname !== '/register' && location.pathname !== '/' && <Navbar />}
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/movies" element={<ProtectedRoute element={() => <MovieList movies={movies} />} />} />
         <Route path="/movie/:id" element={<ProtectedRoute element={MovieDetails} />} />
         <Route path="/cart" element={<ProtectedRoute element={Cart} />} />

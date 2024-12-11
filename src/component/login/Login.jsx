@@ -1,6 +1,7 @@
+// Login.jsx
 import React, { useState } from 'react';
 import { useAuth } from '../usecontext/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Login.css';
 
 function Login() {
@@ -26,7 +27,7 @@ function Login() {
   return (
     <div className="login-container">
       <form onSubmit={handleSubmit}>
-        <h2>Login</h2>
+        <h2>LOGIN</h2>
         {error && <p className="error">{error}</p>}
         <input
           type="text"
@@ -43,6 +44,9 @@ function Login() {
           onChange={handleChange}
         />
         <button type="submit">Login</button>
+        <p>
+          Don't have an account? <Link to="/register">Register here</Link>
+        </p>
       </form>
     </div>
   );
